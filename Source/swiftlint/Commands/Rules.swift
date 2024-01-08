@@ -155,7 +155,7 @@ private extension TextTable {
 private struct Terminal {
     static func currentWidth() -> Int {
 #if os(Windows)
-        var csbi: CONSOLE_SCREEN_BUFFER_INFO = CONSOLE_SCREEN_BUFFER_INFO()
+        var csbi = CONSOLE_SCREEN_BUFFER_INFO()
         guard GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi) else {
             return 80
         }

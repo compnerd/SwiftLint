@@ -1,4 +1,4 @@
-#if !os(Linux) && !os(Windows)
+#if os(macOS)
 import SystemConfiguration
 #endif
 
